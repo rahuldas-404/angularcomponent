@@ -1,0 +1,10 @@
+<div>
+    <form>
+        <input id='fi' type="file" (change)="validate($event)" required>
+        <select [(ngModel)]="s" id='sel' (change)="confirm($event)" [disabled]="isselectdisable" [ngModelOptions]="{standalone: true}" >
+            <option *ngFor="let option of modulename" [value]="option">{{option}}</option>
+        </select>
+        <button (click)="upload($event)" [disabled]="isdisable">upload</button>
+    </form>
+
+</div>
